@@ -1,8 +1,8 @@
 import React from 'react';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
-import Main from '../components/main';
-import Home from '../views/home';
-import About from '../views/about';
+import Main from './components/main';
+import Home from './views/home';
+import About from './views/about';
 
 const Routes = (
     <Router history={hashHistory} onUpdate={() => window.scrollTo(0, 0)}>

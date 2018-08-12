@@ -1,12 +1,15 @@
 const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
-const server = require('./app');
+
 
 const path = require('path');
 const url = require('url');
 
 let mainWindow;
+
+// Connect server with App
+const server = require('./server');
 
 function createWindow () {
     mainWindow = new BrowserWindow({ width: 800, height: 600 });

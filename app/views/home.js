@@ -20,7 +20,7 @@ class Home extends Component {
     handleSearch(e) {
         e.preventDefault();
         this.setState({ name: e.target.value });
-        Api.getThing().then(data => {
+        Api.testDatabase(this.state.name).then(data => {
             console.log(data);
         });
     }

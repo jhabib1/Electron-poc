@@ -3,10 +3,27 @@
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "electron.js",
+  "build": {
+    "appId": "com.electron.humanitix",
+    "directories": {
+      
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "deb"
+    },
+    "win": {
+      "target": "NSIS"
+    }
+  },
   "scripts": {
     "start": "electron .",
     "dev": "concurrently \"webpack --watch\" \"electron .\"",
-    "build": "rimraf ./public && mkdir public && webpack --progress -p"
+    "build": "rimraf ./public && mkdir public && webpack --progress -p",
+    "package-current": "electron-builder",
+    "package-all": "electron-builder -mw"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -27,6 +44,8 @@
     "copy-webpack-plugin": "4.0.1",
     "css-loader": "0.26.1",
     "electron": "1.4.1",
+    "electron-builder": "^20.27.1",
+    "electron-packager": "^12.1.0",
     "extract-text-webpack-plugin": "2.0.0-rc.3",
     "file-loader": "0.10.0",
     "html-webpack-plugin": "2.28.0",
@@ -40,12 +59,13 @@
     "webpack": "2.2.1"
   },
   "dependencies": {
-    "body-parser": "1.16.1",
-    "express": "4.14.1",
-    "morgan": "1.8.1",
     "axios": "0.15.3",
+    "body-parser": "^1.18.3",
     "classnames": "2.2.5",
     "dotenv": "4.0.0",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.7",
+    "morgan": "^1.9.0",
     "react": "15.4.2",
     "react-dom": "15.4.2",
     "react-router": "3.0.2"

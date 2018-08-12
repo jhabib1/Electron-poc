@@ -1,7 +1,9 @@
 import Axios from 'axios';
 
 const Api = {
-    getThing: () => Axios.get(`/test`)
+    testDatabase: (catName) => Axios.post(`/testDatabase`, {
+        cat: catName
+    })
 };
 
 export default Api;
