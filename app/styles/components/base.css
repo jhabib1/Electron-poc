@@ -9,6 +9,10 @@ html, body {
 	font-size: 100%;
 }
 
+.demo-loadmore-list {
+	min-height: 350px;
+  }
+
 body {
     font-family: helvetica, sans-serif;
 	font-size: 16px;
@@ -20,13 +24,18 @@ body {
 }
 
 .container {
-	max-width: 78.125em;
+	max-width: 400px;
 	margin: 0 auto;
 	padding-left: 1rem;
 	padding-right: 1rem;
+	color: black;
 
 	&.container-md {
 		max-width: 43.75em;
+	}
+
+	h1 {
+		color: #1AB97E
 	}
 
 	&.container-lg {
