@@ -18,3 +18,7 @@
 .text-muted {
     opacity: .7;
 }
+
+.green {
+    color: "#1AB97E !important"
+}

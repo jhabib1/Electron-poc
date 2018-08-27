@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Api from '../helpers/api';
 import { Button, DatePicker } from 'antd'
 import LoginForm from "../components/Form"
+import Logo from "../../public/assets/logo.svg"
+//"../../public/assets/logo.svg"
 
 class Home extends Component {
 	constructor(props) {
@@ -31,20 +33,11 @@ class Home extends Component {
 		const { name } = this.state;
 
 		return (
-			<div className="container text-center" style={{paddingTop: 50}}>
-				<h1 style={{color: '#1AB97E'}}> Login </h1>
+			<div className="container center">
+				<h1 style={{ color: 'black', textAlign: 'left' }}> Login </h1>
 				<LoginForm />
-				<DatePicker />
-				{/* <h2>Name: {name}</h2>
-
-                <form className="search" onSubmit={this.handleSearch}>
-                    <input onChange={this.handleInput} type="search" placeholder="Search" />
-                    <button type="submit" className="btn">Search</button>
-                </form>
-
-                <div className="bg-test" />
-                <img src="assets/apple-icon.png" width="100" alt="Black box" /> */}
 			</div>
+
 		);
 	}
 }

@@ -27,4 +27,10 @@ app.post('/testDatabase', (req, res) => {
     );
 });
 
+app.get('/pingTest', (req, res) => {
+    res.send({
+        hasBeenHit: true
+    })
+})
+
 app.listen(5000, () => console.log('App running on port 5000 🔥'));
