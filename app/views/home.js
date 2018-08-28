@@ -33,7 +33,7 @@ class Home extends Component {
 		const { name } = this.state;
 
 		return (
-			<div className="container center">
+			<div className="container top">
 				<h1 style={{ color: 'black', textAlign: 'left' }}> Login </h1>
 				<LoginForm />
 			</div>

@@ -54,8 +54,12 @@ body {
 	}
 }
 
+.base {
+	margin-top: 15%
+}
+
 .container-large {
-	max-width: 800px;
+	max-width: 1200px;
 	margin: 0 auto;
 	/* padding-left: 1rem; */
 	/* padding-right: 1rem; */

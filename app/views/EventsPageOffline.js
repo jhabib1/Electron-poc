@@ -4,6 +4,7 @@ import { Input } from 'antd';
 import { List, Avatar, Button, Spin } from 'antd';
 import reqwest from 'reqwest'
 import 'antd/dist/antd.css';
+import { Link } from 'react-router';
 
 const Search = Input.Search;
 
@@ -35,12 +36,6 @@ export default class EventsPageOffline extends React.Component {
             },
         });
     }
-
-    // componentWillMount() {
-    //     setInterval(this.setState({
-    //         isLoading: false
-    //     }), 5000)
-    // }
 
     onLoadMore() {
         this.setState({
@@ -79,12 +74,12 @@ export default class EventsPageOffline extends React.Component {
             </div>
         ) : null;
         return (
-            <div className="container-large center">
-
+            <div className="container-large">
                 {isLoading ? (
                     <Spinner />
                 ) :
-                    <div className="container center">
+                    <div className="container-large">
+                        <h1 className="text-left">Events </h1>
                         <Search
                             placeholder="input search text"
                             onSearch={value => console.log(value)}
@@ -101,12 +96,24 @@ export default class EventsPageOffline extends React.Component {
                                     <List.Item.Meta
                                         avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                                         title={<a href="https://ant.design">{item.name.last}</a>}
-                                        // description="Just need to fill this with something"
+                                    // description="Just need to fill this with something"
                                     />
                                     <div>content</div>
                                 </List.Item>
                             )}
                         />
+
+                        <Button style={{ width: 370, marginTop: 15, marginBottom: 15 }} type="primary" htmlType="submit" className="login-form-button">
+                            <Link to="/">
+                                Home
+                            </Link>
+                        </Button>
+                        <br />
+                        <Button style={{ width: 370, marginTop: 15, marginBottom: 15 }} type="primary" htmlType="submit" className="login-form-button">
+                            <Link to="event">
+                                Event
+                            </Link>
+                        </Button>
                     </div>}
             </div>
         )
