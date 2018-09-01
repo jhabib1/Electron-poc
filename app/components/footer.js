@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navbar = () => (
     <div className="container">
-        <p>&copy; Some app</p>
+        <p>Humanitix &copy; </p>
     </div>
 );
 
